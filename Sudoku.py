@@ -197,8 +197,7 @@ def solve(sudoku):
         printSudoku(sudoku)
     return sudoku
 
-
-
+    # Solves the sudoku logiacally as far as it gets and returns it
 def solveLogically(sudoku):
     newNumberFound = True
     while newNumberFound:
@@ -226,6 +225,7 @@ def legalInThisCell(sudoku, y, x, v, yBox, xBox):
     if not sudoku[y][x] and not numberInBox(sudoku, v, yBox, xBox) and not numberOnRowOrColumn(sudoku, y, x, v):
         return True
     return False
+
 
     # Can this number cannot be in another cell in this box?
 def numberCannotBeInOtherCellsInBox(sudoku, y, x, v, yBox, xBox):
